@@ -1,0 +1,515 @@
+{
+	"info": {
+		"_postman_id": "7037dc37-976a-4c9d-a694-85219947bd91",
+		"name": "AbitmediaChallenge",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13811728"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"Edison Gavilima\",\r\n    \"password\": \"12345678\",\r\n    \"email\": \"prueba12@gmail.com\"\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/user/register",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"user",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"prueba12@gmail.com\",\r\n    \"password\": \"12345678\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/auth/login",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Info User",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjIzZmJmZjk5MzdjN2ExYmUwY2Q1OTc3NWRkYWMxNmExY2Y0MjFmYTcyNDBhMmQ5MTk4YmNjMjNlNGI2N2I4NzUzZjMwNGM1YjI5NjcyMjZjIn0.eyJhdWQiOiIyIiwianRpIjoiMjNmYmZmOTkzN2M3YTFiZTBjZDU5Nzc1ZGRhYzE2YTFjZjQyMWZhNzI0MGEyZDkxOThiY2MyM2U0YjY3Yjg3NTNmMzA0YzViMjk2NzIyNmMiLCJpYXQiOjE3MDQ5NDQwMTAsIm5iZiI6MTcwNDk0NDAxMCwiZXhwIjoxNzM2NTY2NDEwLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.x_QXSSLysBOuooZv2qoXRSZZqEuj9LDKdEOKVMn-Pv5dWIjkh8DDIScNhwqv5vs-20IQg-aOqcGCq3FhBpxC-qXJpDMdopyT3xtTSBri4NJLB4ExmxYuOsM0QQQVDcOxIeXPwGpD2c3aHITGCNS1PNl6XFLFxpdLXI5xnxTGrWaKynaib0cyN4SBTsdiQ8a7izBOM9_sPRKQfPomtHHiQyZvCJ8XVLDMoZU8wjvFgifzCRRszumh7KLkaGOksyvdeiIiRXl_QoLEdswF5tH-9WK1lvk9bv5Lr6islrSGO-sDQxC96BAMKCnRtlNdB_hLcKvNnAQFdunvhw7JYBIt-1dEVPtL7sSdVUSS0sntAlInC3v3EcA9xnQj3sT29Q0SOfWBy_MMuGsZjLejOccc0SAlydaIX-h2zsfTKwKGO6ss4XZ6Wxh104tH6Q40Sul0wqGfAQw95A961ll6L5LSWwmLX1VjUtW8qjMXeoiE1jtu752EUuG-GCdGogs7SPC5jC5Vhn252bSS-wqLX_zI-Nolw3HxjLz9GHm5zUTE_CU7ygf1Ug2UG-SKxAjb4vBp7vBwv1_s5AvC-SPWkUnxm7YIVJ1pU9lvTurIesJTqjf7OwjQaoqL3z-XY-qHBIWZ7FETvo8aFNj-lk9dFEiys-d4jpszyMiGOU4B1WSYpSw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/user/getUser",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"user",
+								"getUser"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Software",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjIzZmJmZjk5MzdjN2ExYmUwY2Q1OTc3NWRkYWMxNmExY2Y0MjFmYTcyNDBhMmQ5MTk4YmNjMjNlNGI2N2I4NzUzZjMwNGM1YjI5NjcyMjZjIn0.eyJhdWQiOiIyIiwianRpIjoiMjNmYmZmOTkzN2M3YTFiZTBjZDU5Nzc1ZGRhYzE2YTFjZjQyMWZhNzI0MGEyZDkxOThiY2MyM2U0YjY3Yjg3NTNmMzA0YzViMjk2NzIyNmMiLCJpYXQiOjE3MDQ5NDQwMTAsIm5iZiI6MTcwNDk0NDAxMCwiZXhwIjoxNzM2NTY2NDEwLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.x_QXSSLysBOuooZv2qoXRSZZqEuj9LDKdEOKVMn-Pv5dWIjkh8DDIScNhwqv5vs-20IQg-aOqcGCq3FhBpxC-qXJpDMdopyT3xtTSBri4NJLB4ExmxYuOsM0QQQVDcOxIeXPwGpD2c3aHITGCNS1PNl6XFLFxpdLXI5xnxTGrWaKynaib0cyN4SBTsdiQ8a7izBOM9_sPRKQfPomtHHiQyZvCJ8XVLDMoZU8wjvFgifzCRRszumh7KLkaGOksyvdeiIiRXl_QoLEdswF5tH-9WK1lvk9bv5Lr6islrSGO-sDQxC96BAMKCnRtlNdB_hLcKvNnAQFdunvhw7JYBIt-1dEVPtL7sSdVUSS0sntAlInC3v3EcA9xnQj3sT29Q0SOfWBy_MMuGsZjLejOccc0SAlydaIX-h2zsfTKwKGO6ss4XZ6Wxh104tH6Q40Sul0wqGfAQw95A961ll6L5LSWwmLX1VjUtW8qjMXeoiE1jtu752EUuG-GCdGogs7SPC5jC5Vhn252bSS-wqLX_zI-Nolw3HxjLz9GHm5zUTE_CU7ygf1Ug2UG-SKxAjb4vBp7vBwv1_s5AvC-SPWkUnxm7YIVJ1pU9lvTurIesJTqjf7OwjQaoqL3z-XY-qHBIWZ7FETvo8aFNj-lk9dFEiys-d4jpszyMiGOU4B1WSYpSw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"item\": \"Licencia Office 4\",\r\n    \"price\":25,\r\n    \"operative_system\": \"Linux\",\r\n    \"stock\":1,\r\n    \"sku\": \"1234567890\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/software/create",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"software",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Read",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjIzZmJmZjk5MzdjN2ExYmUwY2Q1OTc3NWRkYWMxNmExY2Y0MjFmYTcyNDBhMmQ5MTk4YmNjMjNlNGI2N2I4NzUzZjMwNGM1YjI5NjcyMjZjIn0.eyJhdWQiOiIyIiwianRpIjoiMjNmYmZmOTkzN2M3YTFiZTBjZDU5Nzc1ZGRhYzE2YTFjZjQyMWZhNzI0MGEyZDkxOThiY2MyM2U0YjY3Yjg3NTNmMzA0YzViMjk2NzIyNmMiLCJpYXQiOjE3MDQ5NDQwMTAsIm5iZiI6MTcwNDk0NDAxMCwiZXhwIjoxNzM2NTY2NDEwLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.x_QXSSLysBOuooZv2qoXRSZZqEuj9LDKdEOKVMn-Pv5dWIjkh8DDIScNhwqv5vs-20IQg-aOqcGCq3FhBpxC-qXJpDMdopyT3xtTSBri4NJLB4ExmxYuOsM0QQQVDcOxIeXPwGpD2c3aHITGCNS1PNl6XFLFxpdLXI5xnxTGrWaKynaib0cyN4SBTsdiQ8a7izBOM9_sPRKQfPomtHHiQyZvCJ8XVLDMoZU8wjvFgifzCRRszumh7KLkaGOksyvdeiIiRXl_QoLEdswF5tH-9WK1lvk9bv5Lr6islrSGO-sDQxC96BAMKCnRtlNdB_hLcKvNnAQFdunvhw7JYBIt-1dEVPtL7sSdVUSS0sntAlInC3v3EcA9xnQj3sT29Q0SOfWBy_MMuGsZjLejOccc0SAlydaIX-h2zsfTKwKGO6ss4XZ6Wxh104tH6Q40Sul0wqGfAQw95A961ll6L5LSWwmLX1VjUtW8qjMXeoiE1jtu752EUuG-GCdGogs7SPC5jC5Vhn252bSS-wqLX_zI-Nolw3HxjLz9GHm5zUTE_CU7ygf1Ug2UG-SKxAjb4vBp7vBwv1_s5AvC-SPWkUnxm7YIVJ1pU9lvTurIesJTqjf7OwjQaoqL3z-XY-qHBIWZ7FETvo8aFNj-lk9dFEiys-d4jpszyMiGOU4B1WSYpSw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"item\": \"Licencia Office\",\r\n    \"value\":25,\r\n    \"operative_system\": \"Linux\",\r\n    \"stock\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/software/read/:sku",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"software",
+								"read",
+								":sku"
+							],
+							"variable": [
+								{
+									"key": "sku",
+									"value": "1234567894"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjIzZmJmZjk5MzdjN2ExYmUwY2Q1OTc3NWRkYWMxNmExY2Y0MjFmYTcyNDBhMmQ5MTk4YmNjMjNlNGI2N2I4NzUzZjMwNGM1YjI5NjcyMjZjIn0.eyJhdWQiOiIyIiwianRpIjoiMjNmYmZmOTkzN2M3YTFiZTBjZDU5Nzc1ZGRhYzE2YTFjZjQyMWZhNzI0MGEyZDkxOThiY2MyM2U0YjY3Yjg3NTNmMzA0YzViMjk2NzIyNmMiLCJpYXQiOjE3MDQ5NDQwMTAsIm5iZiI6MTcwNDk0NDAxMCwiZXhwIjoxNzM2NTY2NDEwLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.x_QXSSLysBOuooZv2qoXRSZZqEuj9LDKdEOKVMn-Pv5dWIjkh8DDIScNhwqv5vs-20IQg-aOqcGCq3FhBpxC-qXJpDMdopyT3xtTSBri4NJLB4ExmxYuOsM0QQQVDcOxIeXPwGpD2c3aHITGCNS1PNl6XFLFxpdLXI5xnxTGrWaKynaib0cyN4SBTsdiQ8a7izBOM9_sPRKQfPomtHHiQyZvCJ8XVLDMoZU8wjvFgifzCRRszumh7KLkaGOksyvdeiIiRXl_QoLEdswF5tH-9WK1lvk9bv5Lr6islrSGO-sDQxC96BAMKCnRtlNdB_hLcKvNnAQFdunvhw7JYBIt-1dEVPtL7sSdVUSS0sntAlInC3v3EcA9xnQj3sT29Q0SOfWBy_MMuGsZjLejOccc0SAlydaIX-h2zsfTKwKGO6ss4XZ6Wxh104tH6Q40Sul0wqGfAQw95A961ll6L5LSWwmLX1VjUtW8qjMXeoiE1jtu752EUuG-GCdGogs7SPC5jC5Vhn252bSS-wqLX_zI-Nolw3HxjLz9GHm5zUTE_CU7ygf1Ug2UG-SKxAjb4vBp7vBwv1_s5AvC-SPWkUnxm7YIVJ1pU9lvTurIesJTqjf7OwjQaoqL3z-XY-qHBIWZ7FETvo8aFNj-lk9dFEiys-d4jpszyMiGOU4B1WSYpSw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"item\": \"Licencia Office\",\r\n    \"value\":25,\r\n    \"operative_system\": \"Linux\",\r\n    \"stock\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/software/delete/:id",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"software",
+								"delete",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "oihugh"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjIzZmJmZjk5MzdjN2ExYmUwY2Q1OTc3NWRkYWMxNmExY2Y0MjFmYTcyNDBhMmQ5MTk4YmNjMjNlNGI2N2I4NzUzZjMwNGM1YjI5NjcyMjZjIn0.eyJhdWQiOiIyIiwianRpIjoiMjNmYmZmOTkzN2M3YTFiZTBjZDU5Nzc1ZGRhYzE2YTFjZjQyMWZhNzI0MGEyZDkxOThiY2MyM2U0YjY3Yjg3NTNmMzA0YzViMjk2NzIyNmMiLCJpYXQiOjE3MDQ5NDQwMTAsIm5iZiI6MTcwNDk0NDAxMCwiZXhwIjoxNzM2NTY2NDEwLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.x_QXSSLysBOuooZv2qoXRSZZqEuj9LDKdEOKVMn-Pv5dWIjkh8DDIScNhwqv5vs-20IQg-aOqcGCq3FhBpxC-qXJpDMdopyT3xtTSBri4NJLB4ExmxYuOsM0QQQVDcOxIeXPwGpD2c3aHITGCNS1PNl6XFLFxpdLXI5xnxTGrWaKynaib0cyN4SBTsdiQ8a7izBOM9_sPRKQfPomtHHiQyZvCJ8XVLDMoZU8wjvFgifzCRRszumh7KLkaGOksyvdeiIiRXl_QoLEdswF5tH-9WK1lvk9bv5Lr6islrSGO-sDQxC96BAMKCnRtlNdB_hLcKvNnAQFdunvhw7JYBIt-1dEVPtL7sSdVUSS0sntAlInC3v3EcA9xnQj3sT29Q0SOfWBy_MMuGsZjLejOccc0SAlydaIX-h2zsfTKwKGO6ss4XZ6Wxh104tH6Q40Sul0wqGfAQw95A961ll6L5LSWwmLX1VjUtW8qjMXeoiE1jtu752EUuG-GCdGogs7SPC5jC5Vhn252bSS-wqLX_zI-Nolw3HxjLz9GHm5zUTE_CU7ygf1Ug2UG-SKxAjb4vBp7vBwv1_s5AvC-SPWkUnxm7YIVJ1pU9lvTurIesJTqjf7OwjQaoqL3z-XY-qHBIWZ7FETvo8aFNj-lk9dFEiys-d4jpszyMiGOU4B1WSYpSw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"item\": \"Licencia Office 4\",\r\n    \"price\":25,\r\n    \"operative_system\": \"Linux\",\r\n    \"stock\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/software/update",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"software",
+								"update"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Service",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjIzZmJmZjk5MzdjN2ExYmUwY2Q1OTc3NWRkYWMxNmExY2Y0MjFmYTcyNDBhMmQ5MTk4YmNjMjNlNGI2N2I4NzUzZjMwNGM1YjI5NjcyMjZjIn0.eyJhdWQiOiIyIiwianRpIjoiMjNmYmZmOTkzN2M3YTFiZTBjZDU5Nzc1ZGRhYzE2YTFjZjQyMWZhNzI0MGEyZDkxOThiY2MyM2U0YjY3Yjg3NTNmMzA0YzViMjk2NzIyNmMiLCJpYXQiOjE3MDQ5NDQwMTAsIm5iZiI6MTcwNDk0NDAxMCwiZXhwIjoxNzM2NTY2NDEwLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.x_QXSSLysBOuooZv2qoXRSZZqEuj9LDKdEOKVMn-Pv5dWIjkh8DDIScNhwqv5vs-20IQg-aOqcGCq3FhBpxC-qXJpDMdopyT3xtTSBri4NJLB4ExmxYuOsM0QQQVDcOxIeXPwGpD2c3aHITGCNS1PNl6XFLFxpdLXI5xnxTGrWaKynaib0cyN4SBTsdiQ8a7izBOM9_sPRKQfPomtHHiQyZvCJ8XVLDMoZU8wjvFgifzCRRszumh7KLkaGOksyvdeiIiRXl_QoLEdswF5tH-9WK1lvk9bv5Lr6islrSGO-sDQxC96BAMKCnRtlNdB_hLcKvNnAQFdunvhw7JYBIt-1dEVPtL7sSdVUSS0sntAlInC3v3EcA9xnQj3sT29Q0SOfWBy_MMuGsZjLejOccc0SAlydaIX-h2zsfTKwKGO6ss4XZ6Wxh104tH6Q40Sul0wqGfAQw95A961ll6L5LSWwmLX1VjUtW8qjMXeoiE1jtu752EUuG-GCdGogs7SPC5jC5Vhn252bSS-wqLX_zI-Nolw3HxjLz9GHm5zUTE_CU7ygf1Ug2UG-SKxAjb4vBp7vBwv1_s5AvC-SPWkUnxm7YIVJ1pU9lvTurIesJTqjf7OwjQaoqL3z-XY-qHBIWZ7FETvo8aFNj-lk9dFEiys-d4jpszyMiGOU4B1WSYpSw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"item\": \"Licencia Officex2\",\r\n    \"price\":25\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/service/create",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"service",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Read",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjIzZmJmZjk5MzdjN2ExYmUwY2Q1OTc3NWRkYWMxNmExY2Y0MjFmYTcyNDBhMmQ5MTk4YmNjMjNlNGI2N2I4NzUzZjMwNGM1YjI5NjcyMjZjIn0.eyJhdWQiOiIyIiwianRpIjoiMjNmYmZmOTkzN2M3YTFiZTBjZDU5Nzc1ZGRhYzE2YTFjZjQyMWZhNzI0MGEyZDkxOThiY2MyM2U0YjY3Yjg3NTNmMzA0YzViMjk2NzIyNmMiLCJpYXQiOjE3MDQ5NDQwMTAsIm5iZiI6MTcwNDk0NDAxMCwiZXhwIjoxNzM2NTY2NDEwLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.x_QXSSLysBOuooZv2qoXRSZZqEuj9LDKdEOKVMn-Pv5dWIjkh8DDIScNhwqv5vs-20IQg-aOqcGCq3FhBpxC-qXJpDMdopyT3xtTSBri4NJLB4ExmxYuOsM0QQQVDcOxIeXPwGpD2c3aHITGCNS1PNl6XFLFxpdLXI5xnxTGrWaKynaib0cyN4SBTsdiQ8a7izBOM9_sPRKQfPomtHHiQyZvCJ8XVLDMoZU8wjvFgifzCRRszumh7KLkaGOksyvdeiIiRXl_QoLEdswF5tH-9WK1lvk9bv5Lr6islrSGO-sDQxC96BAMKCnRtlNdB_hLcKvNnAQFdunvhw7JYBIt-1dEVPtL7sSdVUSS0sntAlInC3v3EcA9xnQj3sT29Q0SOfWBy_MMuGsZjLejOccc0SAlydaIX-h2zsfTKwKGO6ss4XZ6Wxh104tH6Q40Sul0wqGfAQw95A961ll6L5LSWwmLX1VjUtW8qjMXeoiE1jtu752EUuG-GCdGogs7SPC5jC5Vhn252bSS-wqLX_zI-Nolw3HxjLz9GHm5zUTE_CU7ygf1Ug2UG-SKxAjb4vBp7vBwv1_s5AvC-SPWkUnxm7YIVJ1pU9lvTurIesJTqjf7OwjQaoqL3z-XY-qHBIWZ7FETvo8aFNj-lk9dFEiys-d4jpszyMiGOU4B1WSYpSw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"item\": \"Licencia Office\",\r\n    \"value\":25,\r\n    \"operative_system\": \"Linux\",\r\n    \"stock\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/service/read/:sku",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"service",
+								"read",
+								":sku"
+							],
+							"variable": [
+								{
+									"key": "sku",
+									"value": "1234567890"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjIzZmJmZjk5MzdjN2ExYmUwY2Q1OTc3NWRkYWMxNmExY2Y0MjFmYTcyNDBhMmQ5MTk4YmNjMjNlNGI2N2I4NzUzZjMwNGM1YjI5NjcyMjZjIn0.eyJhdWQiOiIyIiwianRpIjoiMjNmYmZmOTkzN2M3YTFiZTBjZDU5Nzc1ZGRhYzE2YTFjZjQyMWZhNzI0MGEyZDkxOThiY2MyM2U0YjY3Yjg3NTNmMzA0YzViMjk2NzIyNmMiLCJpYXQiOjE3MDQ5NDQwMTAsIm5iZiI6MTcwNDk0NDAxMCwiZXhwIjoxNzM2NTY2NDEwLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.x_QXSSLysBOuooZv2qoXRSZZqEuj9LDKdEOKVMn-Pv5dWIjkh8DDIScNhwqv5vs-20IQg-aOqcGCq3FhBpxC-qXJpDMdopyT3xtTSBri4NJLB4ExmxYuOsM0QQQVDcOxIeXPwGpD2c3aHITGCNS1PNl6XFLFxpdLXI5xnxTGrWaKynaib0cyN4SBTsdiQ8a7izBOM9_sPRKQfPomtHHiQyZvCJ8XVLDMoZU8wjvFgifzCRRszumh7KLkaGOksyvdeiIiRXl_QoLEdswF5tH-9WK1lvk9bv5Lr6islrSGO-sDQxC96BAMKCnRtlNdB_hLcKvNnAQFdunvhw7JYBIt-1dEVPtL7sSdVUSS0sntAlInC3v3EcA9xnQj3sT29Q0SOfWBy_MMuGsZjLejOccc0SAlydaIX-h2zsfTKwKGO6ss4XZ6Wxh104tH6Q40Sul0wqGfAQw95A961ll6L5LSWwmLX1VjUtW8qjMXeoiE1jtu752EUuG-GCdGogs7SPC5jC5Vhn252bSS-wqLX_zI-Nolw3HxjLz9GHm5zUTE_CU7ygf1Ug2UG-SKxAjb4vBp7vBwv1_s5AvC-SPWkUnxm7YIVJ1pU9lvTurIesJTqjf7OwjQaoqL3z-XY-qHBIWZ7FETvo8aFNj-lk9dFEiys-d4jpszyMiGOU4B1WSYpSw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"item\": \"Licencia Office\",\r\n    \"value\":25,\r\n    \"operative_system\": \"Linux\",\r\n    \"stock\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/service/delete/:id",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"service",
+								"delete",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjIzZmJmZjk5MzdjN2ExYmUwY2Q1OTc3NWRkYWMxNmExY2Y0MjFmYTcyNDBhMmQ5MTk4YmNjMjNlNGI2N2I4NzUzZjMwNGM1YjI5NjcyMjZjIn0.eyJhdWQiOiIyIiwianRpIjoiMjNmYmZmOTkzN2M3YTFiZTBjZDU5Nzc1ZGRhYzE2YTFjZjQyMWZhNzI0MGEyZDkxOThiY2MyM2U0YjY3Yjg3NTNmMzA0YzViMjk2NzIyNmMiLCJpYXQiOjE3MDQ5NDQwMTAsIm5iZiI6MTcwNDk0NDAxMCwiZXhwIjoxNzM2NTY2NDEwLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.x_QXSSLysBOuooZv2qoXRSZZqEuj9LDKdEOKVMn-Pv5dWIjkh8DDIScNhwqv5vs-20IQg-aOqcGCq3FhBpxC-qXJpDMdopyT3xtTSBri4NJLB4ExmxYuOsM0QQQVDcOxIeXPwGpD2c3aHITGCNS1PNl6XFLFxpdLXI5xnxTGrWaKynaib0cyN4SBTsdiQ8a7izBOM9_sPRKQfPomtHHiQyZvCJ8XVLDMoZU8wjvFgifzCRRszumh7KLkaGOksyvdeiIiRXl_QoLEdswF5tH-9WK1lvk9bv5Lr6islrSGO-sDQxC96BAMKCnRtlNdB_hLcKvNnAQFdunvhw7JYBIt-1dEVPtL7sSdVUSS0sntAlInC3v3EcA9xnQj3sT29Q0SOfWBy_MMuGsZjLejOccc0SAlydaIX-h2zsfTKwKGO6ss4XZ6Wxh104tH6Q40Sul0wqGfAQw95A961ll6L5LSWwmLX1VjUtW8qjMXeoiE1jtu752EUuG-GCdGogs7SPC5jC5Vhn252bSS-wqLX_zI-Nolw3HxjLz9GHm5zUTE_CU7ygf1Ug2UG-SKxAjb4vBp7vBwv1_s5AvC-SPWkUnxm7YIVJ1pU9lvTurIesJTqjf7OwjQaoqL3z-XY-qHBIWZ7FETvo8aFNj-lk9dFEiys-d4jpszyMiGOU4B1WSYpSw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"item\": \"Licencia Office 0\",\r\n    \"price\":25.98\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/service/update",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"service",
+								"update"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
